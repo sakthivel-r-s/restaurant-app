@@ -1,0 +1,20 @@
+.custom-tab {
+  color: black;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0px none;
+  outline: none;
+}
+.selected {
+  color: red;
+  border-bottom: 3px solid red;
+  padding-bottom: 10px;
+}
+
+.category-list-item {
+  list-style-type: none;
+}

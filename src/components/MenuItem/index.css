@@ -1,0 +1,169 @@
+.menu-container {
+  border: 1px solid rgb(99, 95, 95);
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.symbol-container {
+  margin-top: 20px;
+  width: 5%;
+}
+
+@media screen and (max-width: 576px) {
+  .symbol-container {
+    width: 50px;
+  }
+}
+
+.symbol-border {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.style-round {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.menu-details-container {
+  width: 45%;
+}
+.dish-heading {
+  font-size: 25px;
+}
+.dish-price {
+  color: rgb(77, 75, 75);
+}
+.menu-description {
+  font-size: 20px;
+  color: rgb(119, 118, 118);
+}
+
+.calories-container {
+  width: 20%;
+  align-self: center;
+}
+.calories {
+  font-size: 25px;
+  color: orange;
+  text-align: center;
+}
+.menu-image-container {
+  width: 30%;
+  text-align: right;
+  min-height: 100%;
+}
+.menu-image {
+  min-width: 150px;
+  max-width: 200px;
+  min-height: 150px;
+  max-height: 200px;
+  margin-right: auto;
+  background-size: cover;
+}
+@media screen and (max-width: 576px) {
+  .symbol-container {
+    width: 50px;
+  }
+  .dish-heading {
+    font-size: 20px;
+  }
+  .dish-price {
+    font-size: 16px;
+  }
+  .menu-description {
+    font-size: 16px;
+  }
+  .menu-details-container {
+    width: 40%;
+  }
+  .calories-container {
+    width: 15%;
+    align-self: center;
+    font-weight: bold;
+  }
+  .calories {
+    font-size: 20px;
+  }
+  .menu-image-container {
+    width: 40%;
+    text-align: right;
+    min-height: 100%;
+  }
+  .menu-image {
+    min-width: 100px;
+    max-width: 150px;
+    min-height: 100px;
+    max-height: 150px;
+    margin-right: auto;
+    background-size: cover;
+  }
+}
+
+.quantity-container {
+  background-color: green;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.plus-button {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0px none;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+.dish-quantity {
+  font-size: 24px;
+  font-weight: bold;
+}
+@media screen and (max-width: 576px) {
+  .quantity-container {
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .plus-button {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+  .dish-quantity {
+    font-size: 20px;
+  }
+}
+.not-available {
+  font-size: 16px;
+  color: red;
+}
+.customizations {
+  font-size: 20px;
+  color: blue;
+}
+@media screen and (max-width: 576px) {
+  .customizations {
+    font-size: 16px;
+  }
+}
