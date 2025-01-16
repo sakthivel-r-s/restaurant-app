@@ -14,6 +14,9 @@
   font-size: 30px;
   color: black;
 }
+.link-item {
+  text-decoration: none;
+}
 .header-para {
   display: none;
 }
@@ -34,6 +37,10 @@
 }
 .cart-icon {
   margin-left: auto;
+  background-color: transparent;
+  border: 0px none;
+  cursor: pointer;
+  outline: none;
 }
 
 @media screen and (min-width: 577px) {
@@ -49,4 +56,17 @@
   .cart-icon {
     margin-left: 10px;
   }
+}
+.logout-button {
+  height: 30px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  outline: none;
 }

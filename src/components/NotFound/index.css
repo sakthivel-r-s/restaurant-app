@@ -1,0 +1,20 @@
+.notfound-bg-container {
+  height: 100vh;
+  text-align: center;
+}
+.notfound-image {
+  width: 50%;
+}
+.notfound-heading {
+  font-size: 24px;
+}
+.notfound-button {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}

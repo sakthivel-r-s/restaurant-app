@@ -1,7 +1,11 @@
+import {useState, useContext} from 'react'
+
+import CartContext from '../../context/CartContext'
+
 import './index.css'
 
 const MenuItem = props => {
-  const {menuDetails, addCartItem, removeCartItem, myOrders} = props
+  const {menuDetails} = props
   const {
     dishAvailability,
     dishType,
@@ -12,24 +16,26 @@ const MenuItem = props => {
     dishName,
     dishPrice,
     addonCat,
-    dishId,
   } = menuDetails
 
-  const onIncreaseQuantity = () => addCartItem(menuDetails)
+  const [quantity, setQuantity] = useState(0)
+  const {addCartItem} = useContext(CartContext)
 
-  const onDecreaseQuantity = () => removeCartItem(menuDetails)
+  const onIncreaseQuantity = () => setQuantity(prev => prev + 1)
 
-  const getQuantity = () => {
-    const cartItem = myOrders.find(each => each.dishId === dishId)
-    return cartItem ? cartItem.quantity : 0
-  }
+  const onDecreaseQuantity = () =>
+    setQuantity(prev => (prev > 0 ? prev - 1 : 0))
+
+  const onAddtoCartItem = () => addCartItem({...menuDetails, quantity})
 
   return (
     <div className="menu-container">
       <div className="symbol-container">
         <div
           className="symbol-border"
-          style={{border: `1px solid ${dishType === 1 ? 'red' : 'green'}`}}
+          style={{
+            border: `1px solid ${dishType === 1 ? 'red' : 'green'}`,
+          }}
         >
           <div
             className="style-round"
@@ -48,7 +54,7 @@ const MenuItem = props => {
         <p className="menu-description">{dishDescription}</p>
         {dishAvailability ? (
           <>
-            <div className="quantity-container">
+            <div className="menu-quantity-container">
               <button
                 type="button"
                 onClick={onDecreaseQuantity}
@@ -56,7 +62,7 @@ const MenuItem = props => {
               >
                 -
               </button>
-              <p className="dish-quantity">{getQuantity().toString()}</p>
+              <p className="dish-quantity">{quantity}</p>
               <button
                 type="button"
                 onClick={onIncreaseQuantity}
@@ -68,6 +74,15 @@ const MenuItem = props => {
             {addonCat.length !== 0 ? (
               <p className="customizations">Customizations available</p>
             ) : null}
+            {quantity > 0 && (
+              <button
+                onClick={onAddtoCartItem}
+                className="add-to-cart-button"
+                type="button"
+              >
+                ADD TO CART
+              </button>
+            )}
           </>
         ) : (
           <p className="not-available">Not available</p>

@@ -5,10 +5,12 @@ dependencies:
   '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.6.2
   chalk: 4.1.0
+  js-cookie: 3.0.5
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
   react-icons: 4.2.0_react@17.0.1
   react-loader-spinner: 4.0.0_react-dom@17.0.1+react@17.0.1
+  react-router: 7.1.1_react-dom@17.0.1+react@17.0.1
   react-router-dom: 5.3.0_react@17.0.1
 devDependencies:
   eslint-config-airbnb: 18.2.1
@@ -3417,6 +3419,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==
+  /@types/cookie/0.6.0:
+    dev: false
+    resolution:
+      integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==
   /@types/eslint/7.29.0:
     dependencies:
       '@types/estree': 1.0.1
@@ -5470,6 +5476,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
+  /cookie/1.0.2:
+    dev: false
+    engines:
+      node: '>=18'
+    resolution:
+      integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==
   /copy-concurrently/1.0.5:
     dependencies:
       aproba: 1.2.0
@@ -9293,6 +9305,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-jxTmrvuecVISvKFFhOkjsWRZV7sFqdSUAd1ajOKY+/QE/aLBVstsJ/dX8GczLzwiT6ZEwwmZqtCUHLHHQVzcfA==
+  /js-cookie/3.0.5:
+    dev: false
+    engines:
+      node: '>=14'
+    resolution:
+      integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==
   /js-levenshtein/1.1.6:
     dev: true
     engines:
@@ -12025,6 +12043,25 @@ packages:
       react: '>=15'
     resolution:
       integrity: sha512-lIboRiOtDLFdg1VTemMwud9vRVuOCZmUIT/7lUoZiSpPODiiH1UQlfXy+vPLC/7IWdFYnhRwAyNqA/+I7wnvKQ==
+  /react-router/7.1.1_react-dom@17.0.1+react@17.0.1:
+    dependencies:
+      '@types/cookie': 0.6.0
+      cookie: 1.0.2
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      set-cookie-parser: 2.7.1
+      turbo-stream: 2.4.0
+    dev: false
+    engines:
+      node: '>=20.0.0'
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+    resolution:
+      integrity: sha512-39sXJkftkKWRZ2oJtHhCxmoCrBCULr/HAH4IT5DHlgu/Q0FCPV0S4Lx+abjDTx/74xoZzNYDYbOZWlJjruyuDQ==
   /react-scripts/4.0.3_react@17.0.1:
     dependencies:
       '@babel/core': 7.12.3
@@ -12804,6 +12841,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-RVnVQxTXuerk653XfuliOxBP81Sf0+qfQE73LIYKcyMYHG94AuH0kgrQpRDuTZnSmjpysHmzxJXKNfa6PjFhyQ==
+  /set-cookie-parser/2.7.1:
+    dev: false
+    resolution:
+      integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==
   /set-value/2.0.1:
     dependencies:
       extend-shallow: 2.0.1
@@ -13787,6 +13828,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-JVa5ijo+j/sOoHGjw0sxw734b1LhBkQ3bvUGNdxnVXDCX81Yx7TFgnZygxrIIWn23hbfTaMYLwRmAxFyDuFmIw==
+  /turbo-stream/2.4.0:
+    dev: false
+    resolution:
+      integrity: sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g==
   /type-check/0.4.0:
     dependencies:
       prelude-ls: 1.2.1
@@ -14780,6 +14825,7 @@ specifiers:
   eslint-config-prettier: 8.1.0
   eslint-plugin-prettier: 3.3.1
   husky: 4.3.8
+  js-cookie: 3.0.5
   lint-staged: 10.5.4
   msw: 0.35.0
   npm-run-all: 4.1.5
@@ -14788,5 +14834,6 @@ specifiers:
   react-dom: 17.0.1
   react-icons: 4.2.0
   react-loader-spinner: 4.0.0
+  react-router: 7.1.1
   react-router-dom: 5.3.0
   react-scripts: 4.0.3

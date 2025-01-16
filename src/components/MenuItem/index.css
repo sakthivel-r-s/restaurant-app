@@ -109,7 +109,7 @@
   }
 }
 
-.quantity-container {
+.menu-quantity-container {
   background-color: green;
   color: white;
   display: flex;
@@ -136,8 +136,20 @@
   font-size: 24px;
   font-weight: bold;
 }
+.add-to-cart-button {
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid black;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
 @media screen and (max-width: 576px) {
-  .quantity-container {
+  .menu-quantity-container {
     width: 100px;
     height: 40px;
     border-radius: 25px;
